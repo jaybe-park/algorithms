@@ -7,8 +7,6 @@ if E == RANGE_E:
 if M == RANGE_M:
     M = 0
 while True:
-    
-
     if (year % RANGE_E) == E and (year % RANGE_M) == M:
         break
     else:
