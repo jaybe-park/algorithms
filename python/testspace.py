@@ -1,24 +1,10 @@
-import random
+def rotate(original):
+    return list(map(lambda x: list(x), zip(*reversed(original))))
 
-N = 10
+original = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+rotated = rotate(original)
 
-list1 = list()
-while True:
-    if len(list1) == N:
-        break
-    else:
-        curr_num = random.randint(1, N)
-        if not curr_num in list1:
-            list1.append(curr_num)
-
-list2 = list()
-while True:
-    if len(list2) == N:
-        break
-    else:
-        curr_num = random.randint(1, N)
-        if not curr_num in list2:
-            list2.append(curr_num)
-
-print(list1)
-print(list2)
+for row in original:
+    print(*row)
+for row in rotated:
+    print(*row)
