@@ -1,15 +1,14 @@
-N, T = map(int, input().split())
-tasks = list(map(int, input().split()))
+N, C = map(int, input().split())
+sky = [False] * (C + 1)
 
-curr_time = 0
-result = -1
-for inx, task in enumerate(tasks):
-    curr_time += task
-    if T < curr_time:
-        result = inx
-        break
+result = 0
 
-if result == -1:
-    result = N
+for __ in range(N):
+    period = int(input())
+    for inx in range(period, len(sky), period):
+        if not sky[inx]:
+            sky[inx] = True
+            result += 1
+
 
 print(result)
