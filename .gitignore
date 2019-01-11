@@ -1,3 +1,4 @@
-*.DS_Store
-*.workspace.py
-*.testspace.py
+*\.DS_Store
+*\workspace.py
+*\testspace.py
+*\.vscode
